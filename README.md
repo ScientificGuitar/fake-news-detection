@@ -10,7 +10,8 @@
 <hr>
 
 ## BACKGROUND 
-With 2022 on track to be the worst year for South Africa for load shedding, the highest stage ever being implemented, and Eskom workers striking, conversations on social media has increased dramatically, with dissent towards Eskom growing.
+We define “fake news” as news stories that are false: the story itself is fabricated, with no verifiable facts, sources or quotes. Some stories may have a nugget of truth, but lack any contextualizing details. They may not include any verifiable facts or sources. Some stories may include basic verifiable facts, but are written using language that is deliberately inflammatory, leaves out pertinent details or only presents one viewpoint.
+Fake news and misinformation exists in many areas. From politics to COVID-19 to conspiracy theories.
 
 <hr>
 
