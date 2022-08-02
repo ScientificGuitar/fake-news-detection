@@ -56,5 +56,13 @@ After inspecting the websites to see that majority of posts are not articles and
 <li>https://gellerreport.com/</li>
 <li>https://newspunch.com/</li>
 <li>https://rightwingtribune.com/</li>
-
+Upon closer inspection and writing some code, some of these websites had to be removed again.
+blingnews only had articles on their first few and last few search pages with everything in the middle not existing.
+conservativepost aggregates articles posted on other websites and provides links to those full articles.
+gellerreport has cloudflare protection.
+Only these 4 websites remain:
+<li>https://americasfreedomfighters.com/</li>
+<li>https://theconservativetreehouse.com/</li>
+<li>https://newspunch.com/</li>
+<li>https://rightwingtribune.com/</li>
 <hr>
