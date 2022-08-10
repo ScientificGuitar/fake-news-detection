@@ -145,9 +145,47 @@ def scrape_rightwingtribune(pages=10):
     articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
     articles_df.to_csv('data/rightwingtribune.csv', index=False)
 
+def scrape_voanews(pages=10):
+    articles_list = []
+
+    for page in pages:
+        try:
+            print(f'Scraping page: {page}')
+            # Search page
+            url = f'https://www.voanews.com/s?k=a&tab=news&pi=1&r=any&pp=50'
+            search_page = requests.get(url)
+
+            soup = BeautifulSoup(search_page.content, 'html.parser')
+            articles = soup.find('div', class_='media-block-wrap').find_all('a', class_='img-wrap')
+            list_articles = ['https://www.voanews.com' + article['href'] for article in articles]
+        except Exception as e:
+            print(e)
+            print(url)
+            print(f'Page {page}\n')
+        for article_url in list_articles:
+            try:
+                article_page = requests.get(list_articles[1]) # www.voanews.com/a/covid-19-experts-urge-australians-to-wear-masks-even-as-latest-omicron-wave-passes/6695626.html
+
+                article_soup = BeautifulSoup(article_page.content, 'html.parser')
+                title = article_soup.find('h1', class_='title').text.strip()
+                title = title.replace(',', '')
+                content_raw = article_soup.find('div', class_='wsw').find_all('p', recursive=False)
+                content = " ".join([p.text.strip() for p in content_raw])
+                content = content.replace(',', '').replace('\n', '')
+
+                articles_list.append(['voanews', title, content])
+            except Exception as e:
+                print(e)
+                print(article_url)
+    articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
+    articles_df.to_csv('data/true/voanews.csv', index=False)
+
+
+
 
 if __name__ == '__main__':
     # scrape_americasfreedomfighters(1100)
     # scrape_lastrefuge(3954)
     # scrape_newspunch(3958)
-    scrape_rightwingtribune(228)
+    # scrape_rightwingtribune(228)
+    scrape_voanews(2000)
