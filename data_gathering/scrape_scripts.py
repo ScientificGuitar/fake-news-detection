@@ -38,7 +38,7 @@ def scrape_americasfreedomfighters(pages=10):
                 print(article_url)
                 print(f'Search {page}, article {i}\n')
     articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
-    articles_df.to_csv('data/americasfreedomfighters.csv', index=False)
+    articles_df.to_csv('data/fake/americasfreedomfighters.csv', index=False)
 
 def scrape_lastrefuge(pages=10):
     articles_list = []
@@ -73,7 +73,7 @@ def scrape_lastrefuge(pages=10):
                 print(e)
                 print(article_url)
     articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
-    articles_df.to_csv('data/lastrefuge.csv', index=False)
+    articles_df.to_csv('data/fake/lastrefuge.csv', index=False)
 
 def scrape_newspunch(pages=10):
     articles_list = []
@@ -108,7 +108,7 @@ def scrape_newspunch(pages=10):
                 print(e)
                 print(article_url)
     articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
-    articles_df.to_csv('data/newspunch.csv', index=False)
+    articles_df.to_csv('data/fake/newspunch.csv', index=False)
 
 def scrape_rightwingtribune(pages=10):
     articles_list = []
@@ -143,7 +143,7 @@ def scrape_rightwingtribune(pages=10):
                 print(e)
                 print(article_url)
     articles_df = pd.DataFrame(data=articles_list, columns=['source', 'title', 'content'])
-    articles_df.to_csv('data/rightwingtribune.csv', index=False)
+    articles_df.to_csv('data/fake/rightwingtribune.csv', index=False)
 
 def scrape_voanews(pages=10):
     articles_list = []
