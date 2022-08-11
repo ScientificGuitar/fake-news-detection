@@ -148,7 +148,7 @@ def scrape_rightwingtribune(pages=10):
 def scrape_voanews(pages=10):
     articles_list = []
 
-    for page in pages:
+    for page in range(pages):
         try:
             print(f'Scraping page: {page}')
             # Search page
